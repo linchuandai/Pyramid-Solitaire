@@ -1,6 +1,6 @@
 #CCC Senior 2016 Exam Problem 1 Ragaman
 
-#checks if words could be anagrams
+#checks if words could be anagram
 def check (list1, list2):
 
     #checks if length of lists are the same
