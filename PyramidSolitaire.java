@@ -399,9 +399,12 @@ public class PyramidSolitaire extends Applet implements ActionListener, MouseLis
                         if (pyramidsolitaire.isWin () == true)
                         {
                             winScreen.setVisible (true);
-
                             gameover = true;
+                            repaint ();
+
                         }
+                        repaint ();
+
                     }
 
                     //if the card is from the deck
@@ -409,12 +412,15 @@ public class PyramidSolitaire extends Applet implements ActionListener, MouseLis
                     {
                         flipped = true;
                         picked = 2;
+                        repaint ();
+
                     }
 
                     //if the card is from the pyramid
                     else
                     {
                         picked = 2;
+                        repaint ();
                     }
                 }
 
@@ -439,6 +445,7 @@ public class PyramidSolitaire extends Applet implements ActionListener, MouseLis
                         {
                             winScreen.setVisible (true);
                             gameover = true;
+                            repaint ();
                         }
                     }
 
@@ -452,9 +459,11 @@ public class PyramidSolitaire extends Applet implements ActionListener, MouseLis
                         pyramidsolitaire.unchooseCard (card2);
                         pyramidsolitaire.reDrawCard (g, card2);
                         flipped = false;
+                        repaint ();
                     }
                     card1 = 0;
                     card2 = 0;
+                    repaint ();
                 }
             }
 
@@ -469,8 +478,8 @@ public class PyramidSolitaire extends Applet implements ActionListener, MouseLis
         else if (gameover == true)
         {
             restartReminder.setVisible (true);
+            repaint ();
         }
-        repaint ();
     }
 
 
